@@ -68,45 +68,45 @@ const UpdateBooking = () => {
     const { name, email, phone, arrivalDate, members, vehicleName, guideNumber, places, days } = bookingDetails;
 
     return (
-        <div className="my-4">
+        <div className="my-4 p-5 m-5">
             <div className="card p-4">
                 <h1 className="text-center">Update Booking</h1>
                 <form onSubmit={handleUpdate}>
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label">Name</label>
-                        <input type="text" className="form-control" id="name" name="name" value={name} onChange={handleInputChange} />
+                        <input type="text" className="form-control w-100" id="name" name="name" value={name} onChange={handleInputChange} />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="email" className="form-label">Email</label>
-                        <input type="email" className="form-control" id="email" name="email" value={email} onChange={handleInputChange} />
+                        <input type="email" className="form-control w-100" id="email" name="email" value={email} onChange={handleInputChange} />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="phone" className="form-label">Phone</label>
-                        <input type="text" className="form-control" id="phone" name="phone" value={phone} onChange={handleInputChange} />
+                        <input type="text" className="form-control w-100" id="phone" name="phone" value={phone} onChange={handleInputChange} />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="arrivalDate" className="form-label">Arrival Date</label>
-                        <input type="date" className="form-control" id="arrivalDate" name="arrivalDate" value={arrivalDate} onChange={handleInputChange} />
+                        <input type="date" className="form-control w-100" id="arrivalDate" name="arrivalDate" value={arrivalDate} onChange={handleInputChange} />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="members" className="form-label">Members</label>
-                        <input type="number" className="form-control" id="members" name="members" value={members} onChange={handleInputChange} />
+                        <input type="number" className="form-control w-100" id="members" name="members" value={members} onChange={handleInputChange} />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="vehicleName" className="form-label">Vehicle Name</label>
-                        <input type="text" className="form-control" id="vehicleName" name="vehicleName" value={vehicleName} onChange={handleInputChange} />
+                        <input type="text" className="form-control w-100" id="vehicleName" name="vehicleName" value={vehicleName} onChange={handleInputChange} />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="guideNumber" className="form-label">Guide Number</label>
-                        <input type="text" className="form-control" id="guideNumber" name="guideNumber" value={guideNumber} onChange={handleInputChange} />
+                        <input type="text" className="form-control w-100" id="guideNumber" name="guideNumber" value={guideNumber} onChange={handleInputChange} />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="places" className="form-label">Places</label>
-                        <input type="text" className="form-control" id="places" name="places" value={places} onChange={handleInputChange} />
+                        <input type="text" className="form-control w-100" id="places" name="places" value={places} onChange={handleInputChange} />
                     </div>
                     <div className="mb-3">
                         <label htmlFor="days" className="form-label">Days</label>
-                        <input type="number" className="form-control" id="days" name="days" value={days} onChange={handleInputChange} />
+                        <input type="number" className="form-control w-100" id="days" name="days" value={days} onChange={handleInputChange} />
                     </div>
                     <button type="submit" className="btn btn-primary">Update Booking</button>
                 </form>

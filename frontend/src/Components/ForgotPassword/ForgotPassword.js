@@ -30,9 +30,11 @@ function ForgotPassword() {
 
   return (
     <div className="auth_main_box">
-      <h1 className="topic_auth">
+      <br/>
+      <h1 className="topic_auth my-2">
         Password <span className="sub_auth">Reset</span>
       </h1>
+      <br/>
       <div className="auth_box_log">
         <div className="auth_sub_box_one">
         <img src={loImg} alt="regomg" className="auth_photo_log" />

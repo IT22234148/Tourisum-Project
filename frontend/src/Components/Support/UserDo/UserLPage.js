@@ -14,6 +14,7 @@ const handleSendReport = () => {
 
 function UserLPage() {
   return (
+    <div className="w-100 d-flex justify-content-center m-2">
     <div className="m-0 container">
       <h1 className="heading">Contact Us</h1>
 
@@ -62,6 +63,7 @@ function UserLPage() {
           </a>
         </div>
       </div>
+    </div>
     </div>
   );
 }

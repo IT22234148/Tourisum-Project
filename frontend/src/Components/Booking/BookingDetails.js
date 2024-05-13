@@ -30,7 +30,7 @@ const BookingDetails = () => {
     };
 
     return (
-        <div className="my-4">
+        <div className="my-4 m-4 p-4">
             <div className="row">
                 {/* <div className="col-md-1">
                     <Link to="/bookings" className="btn btn-primary" style={{ backgroundColor: '#035B83' }}>
@@ -38,7 +38,7 @@ const BookingDetails = () => {
                     </Link>
                 </div> */}
             </div>
-            <h2 className="mb-4">Booking Details</h2>
+            <h2 className="mb-4 m-0">Booking Details</h2>
             <div className="card">
                 <div className="card-body">
                     <p className="card-text"><strong>Name:</strong> {bookingData.name}</p>

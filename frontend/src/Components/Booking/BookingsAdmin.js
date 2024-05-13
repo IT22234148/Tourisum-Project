@@ -107,8 +107,8 @@ const BookingsAdmin = () => {
     };
 
     return (
-        <div className="my-4">
-            <h2 className="text-center mb-4">Bookings</h2>
+        <div className="my-4 p-4">
+            <h2 className="text-center display-flex justify-content-center mx-0">Bookings</h2>
             <div className="d-flex justify-content-between align-items-center">
                 <div>
                     
@@ -146,7 +146,7 @@ const BookingsAdmin = () => {
                 <tbody>
                 {filteredBookings.map((booking, index) => (
         <tr key={booking._id}>
-            <td>{index}</td>
+            <td>{index+1}</td>
             <td>{booking.name}</td>
             <td>{booking.email}</td>
             <td>{booking.phone}</td>

@@ -3,10 +3,11 @@ const mongoose = require("mongoose");
 const usersRouter = require("./Routes/UserRoutes");
 const route = require("./Routes/ProfileRoutes");
 const bookingRoute = require('./Routes/Booking/bookingRoute');
-const imageRouter = require('./Routes/Image/imageRoutes')
+const imageRouter = require('./Routes/imageRoutes.js')
+
 const accommodationRouter = require("./Routes/Accommodation/userRoute");
-const  guideRouter = require("./Routes/Guide/ItemRoute");
-const itemRouter = require("./Routes/Rent/ItemRoute");
+const  guideRouter = require("./Routes/Guide/GuideRoute.js");
+const itemRouter = require("./Routes/Rent/RentRoute.js");
 
 const TicketRouter = require("./Routes/Support/TicketRoutes");
 const FAQRouter = require("./Routes/Support/FAQRoutes");

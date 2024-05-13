@@ -156,56 +156,56 @@ const CreateBooking = () => {
         <div className="my-4">
             <div className="row">
                 <div className="col-md-1">
-                    <Link to="/" className="btn btn-primary" style={{ backgroundColor: '#035B83' }}>
+                    <Link to="/booking" className="btn btn-primary" style={{ backgroundColor: '#035B83' }}>
                         &larr; Back
                     </Link>
                 </div>
                 <div className="col-md-5">
                     <div className="card p-4" style={{ border: '2px solid #53B5E6', backgroundColor: '#BFDCFE' }}>
-                        <h2 className="mb-4 text-center">Add New Booking</h2>
+                        <h2 className="m-0 mb-4 text-center">Add New Booking</h2>
                         <form onSubmit={handleSubmit}>
                             {error && <div className="alert alert-danger">{error}</div>}
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label">Name</label>
-                                <input type="text" className="form-control" id="name" name="name" value={formData.name} onChange={handleChange} required />
+                                <input type="text" className="form-control w-100" id="name" name="name" value={formData.name} onChange={handleChange} required />
                                 {validationErrors.nameError && <div className="text-danger">{validationErrors.nameError}</div>}
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="email" className="form-label">Email</label>
-                                <input type="email" className="form-control" id="email" name="email" value={formData.email} onChange={handleChange} required />
+                                <input type="email" className="form-control w-100" id="email" name="email" value={formData.email} onChange={handleChange} required />
                                 {validationErrors.emailError && <div className="text-danger">{validationErrors.emailError}</div>}
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="phone" className="form-label">Phone</label>
-                                <input type="tel" className="form-control" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
+                                <input type="tel" className="form-control w-100" id="phone" name="phone" value={formData.phone} onChange={handleChange} required />
                                 {validationErrors.phoneError && <div className="text-danger">{validationErrors.phoneError}</div>}
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="arrivalDate" className="form-label">Arrival Date</label>
-                                <input type="date" className="form-control" id="arrivalDate" name="arrivalDate" value={formData.arrivalDate} onChange={handleChange} required />
+                                <input type="date" className="form-control w-100" id="arrivalDate" name="arrivalDate" value={formData.arrivalDate} onChange={handleChange} required />
                                 {validationErrors.daysError && <div className="text-danger">{validationErrors.daysError}</div>}
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="members" className="form-label">Members</label>
-                                <input type="number" className="form-control" id="members" name="members" value={formData.members} onChange={handleChange} required />
+                                <input type="number" className="form-control w-100" id="members" name="members" value={formData.members} onChange={handleChange} required />
                                 {validationErrors.memberError && <div className="text-danger">{validationErrors.memberError}</div>}
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="vehicleName" className="form-label">Vehicle Name</label>
-                                <input type="text" className="form-control" id="vehicleName" name="vehicleName" value={formData.vehicleName} onChange={handleChange} required />
+                                <input type="text" className="form-control w-100" id="vehicleName" name="vehicleName" value={formData.vehicleName} onChange={handleChange} required />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="guideNumber" className="form-label">Guide Number</label>
-                                <input type="number" className="form-control" id="guideNumber" name="guideNumber" value={formData.guideNumber} onChange={handleChange} required />
+                                <input type="number" className="form-control w-100" id="guideNumber" name="guideNumber" value={formData.guideNumber} onChange={handleChange} required />
                                 {validationErrors.guidNumberError && <div className="text-danger">{validationErrors.guidNumberError}</div>}
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="places" className="form-label">Places</label>
-                                <input type="text" className="form-control" id="places" name="places" value={formData.places} onChange={handleChange} required />
+                                <input type="text" className="form-control w-100" id="places" name="places" value={formData.places} onChange={handleChange} required />
                             </div>
                             <div className="mb-3">
                                 <label htmlFor="days" className="form-label">Days</label>
-                                <input type="number" className="form-control" id="days" name="days" value={formData.days} onChange={handleChange} required />
+                                <input type="number" className="form-control w-100" id="days" name="days" value={formData.days} onChange={handleChange} required />
                                 {validationErrors.daysError && <div className="text-danger">{validationErrors.daysError}</div>}
                             </div>
                             <button type="submit" className="btn btn-primary">Add Booking</button>

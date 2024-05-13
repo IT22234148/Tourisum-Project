@@ -6,7 +6,7 @@ import MemoryReportPage from './AdminTab/memory_report_page';
 import AddUser from '../Components/AddUser/AddUser';
 
 import PackagesComponent from "../Components/Admin/ReviewManagement";
-import AddItem from '../Components/Renatal System/Admin/Add Item/AddItem';
+import AddItem from '../Components/Renatal System/Admin/Add Transport/AddItem';
 import AddGuide from '../Components/Guide/Admin/Add Item/AddTransport';
 import ContSALive from '../Components/Support/ContSALive/ContSALive';
 import ATicket from '../Components/AdminTAnswer/ATicket/ATicket';
@@ -23,7 +23,7 @@ import UpdateUser from '../Components/UpdateUser/UpdateUser';
 import UserDetails from '../Components/UserDetails/Users';
 import SeeReviews from '../Components/Reviews/UserDetails/SeeReviews';
 import ViewGuides from '../Components/Guide/User/Item/ViewGuides';
-import UserItems from "../Components/Renatal System/User/Item/Items";
+import UserItems from "../Components/Renatal System/User/ViewGuides/Items";
 import UserLPage from '../Components/Support/UserDo/UserLPage';
 
 const UserDashboard = () => {

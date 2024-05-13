@@ -6,7 +6,7 @@ import MemoryReportPage from './AdminTab/memory_report_page';
 import AddUser from '../Components/AddUser/AddUser';
 
 import PackagesComponent from "../Components/Admin/ReviewManagement";
-import AddItem from '../Components/Renatal System/Admin/Add Item/AddItem';
+import AddItem from '../Components/Renatal System/Admin/Add Transport/AddItem';
 import AddGuide from '../Components/Guide/Admin/Add Item/AddTransport';
 import ContSALive from '../Components/Support/ContSALive/ContSALive';
 import ATicket from '../Components/AdminTAnswer/ATicket/ATicket';
@@ -18,19 +18,23 @@ import UpdateFAQs from '../Components/Support/FAQ/UpdateFAQs';
 import UserAdmin from '../Components/Admin/ReviewManagement';
 import ReviewManagement from '../Components/Admin/ReviewManagement';
 import InsuranceManager from '../Components/Tourist/InsuranceManager';
-import AdminTab from './AdminTab/AdminTab';
+
 import UpdateUser from '../Components/UpdateUser/UpdateUser';
 import UserDetails from '../Components/UserDetails/Users';
-import AdminGuide from '../Components/Renatal System/Admin/Item/Items';
+import Transport from '../Components/Renatal System/Admin/Transport/Transport';
 
 import ReviewAdmin from "../Components/Reviews/Admin/ReviewAdmin";
 import BookingsAdmin from '../Components/Booking/BookingsAdmin';
 import Users from "../Components/UserDetails/Users";
-
+import AdminGuide from "../Components/Guide/Admin/Guide/AdminGuide";
+import Guides from '../Components/Service/Guide/Guides';
+import AdminTab from './AdminTab/AdminTab';
+import Home from '../Components/Home/Home';
+import HomeAd from '../Components/Home/HomeAd';
 
 const Admin = () => {
     const navigate = useNavigate(); // Initialize useNavigate hook
-    const [activeTab, setActiveTab] = useState('tab1'); // State to manage active tab
+    const [activeTab, setActiveTab] = useState('tab0'); // State to manage active tab
 
 
    
@@ -52,10 +56,11 @@ const Admin = () => {
         { id: 'tab16', name: 'Guide Management', url: '/guide-management' },
         { id: 'tab18', name: 'User Management', url: '/user' },
         { id: 'tab19', name: 'Booking Management', url: '/booking' },
-        { id: 'tab15', name: 'Memory', url: '/memory' },
+
         { id: 'tab20', name: 'Admin Transport', url: '/transport-guide' },
 
-        { id: 'tab22', name: 'Users', url: '/users' },
+     
+        { id: 'tab23', name: 'Gallery Admin', url: '/gallery-admin' },
         // { id: 'tab11', name: 'ATicketDetails', url: '/ACrudApp' },
         // { id: 'tab12', name: 'Ticket Management', url: '/AdminLpage' },
         
@@ -92,6 +97,7 @@ const Admin = () => {
         </div>
         <div className='col-10 h-100'>
             <div className="tab-content" id="v-pills-tabContent">
+            {activeTab === 'tab0' && <HomeAd />}
             {activeTab === 'tab1' && <MemoryReportPage />}
             {activeTab === 'tab5' && <AddItem />}
             {activeTab === 'tab8' && <ATicket />}
@@ -99,8 +105,8 @@ const Admin = () => {
             {activeTab === 'tab13' && <ReviewAdmin />}
             {activeTab === 'tab14' && <InsuranceManager />}
             {activeTab === 'tab15' && <MemoryReportPage />}
-            {activeTab === 'tab16' && <AddGuide />}
-            {activeTab === 'tab20' && <AdminGuide />}
+            {activeTab === 'tab16' && <Guides />}
+            {activeTab === 'tab20' && <Transport />}
             
        
 
@@ -117,6 +123,7 @@ const Admin = () => {
                 {activeTab === 'tab19' && <BookingsAdmin />}
 
                 {activeTab === 'tab22' && <Users />}
+                {activeTab === 'tab23' && <AdminTab />}
                 
                 
 

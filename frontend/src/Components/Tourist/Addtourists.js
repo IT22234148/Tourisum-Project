@@ -91,7 +91,7 @@ export default function Addtourists() {
   }
 
   return (
-    <div className="container " style={{ backgroundImage: 'url("https://www.tigermarinecharter.com/wp-content/uploads/2020/05/dream-family-holidays.jpg")' }}>
+    <div className=" " style={{ backgroundImage: 'url("https://www.tigermarinecharter.com/wp-content/uploads/2020/05/dream-family-holidays.jpg")' }}>
       <h1 className="register">Insurance Register Form</h1>
       <form onSubmit={sendData} className="form">
       <div className="form-group row">

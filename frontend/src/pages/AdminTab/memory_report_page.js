@@ -189,96 +189,109 @@ export default function MemoryReportPage() {
 
   return (
 
-    <div className='container'>
-    <div className='adminTab'>
+    <div className=''>
+      <div className='adminTab'>
         <div>
-            <div className='topsection w-100'>
-                <h1 className='adminTabTitle' id='tabTitle' onClick={() => window.location.reload()}>
-                    Photography & Memory Sharing
-                </h1>
-                <h1 className='adminTabTitle'>Report Generation</h1>
-                <div className='memoryAdder'>
-                    <div className='btnSection4'>
-                        <button className='btn btn-primary' onClick={handleClickGoBack}>
-                            <img src={backBtn} alt='back' title='Go back to Admin Tab' style={{ paddingRight: '1px' }} />
-                        </button>
-                        <button className='btn btn-primary' onClick={sortImagesDescending}>
-                            <img src={upBtn} alt='up' title='Descending Order' style={{ paddingRight: '1px' }} />
-                        </button>
-                        <button className='btn btn-primary' onClick={sortImagesAscending}>
-                            <img src={downBtn} alt='down' title='Ascending Order' style={{ paddingRight: '5px' }} />
-                        </button>
-                    </div>
-                    <div className='search-bar'>
-                        <input type='text' placeholder='Search Memory...' value={searchLocation} onChange={handleSearchInputChange} onKeyDown={handleKeyDown} className='form-control' />
-                    </div>
-                    <div className='btnSection4'>
-                        <button className='btn btn-primary' onClick={handleSearch}>
-                            <img src={searchIcon} alt='search button' title='Search' style={{ paddingRight: '10px' }} />
-                        </button>
-                        <button className='btn btn-primary' onClick={downloadReport}>
-                            <img src={downloadBtn} alt='search button' title='Download Report' />
-                        </button>
-                    </div>
-                </div>
+          <div className='topsection w-100'>
+          <h1
+      className='adminTabTitle'
+      id='tabTitle'
+      onClick={() => window.location.reload()}
+      style={{ 
+        textAlign: 'center' ,color: 'white' ,  fontFamily: 'Anton' }}
+    > <br></br>
+      Photography & Memory Sharing
+      <br></br>
+    </h1>
+    <h1 style={{ 
+       textAlign: 'center' ,color: 'white' ,  fontFamily: 'Anton' }}>Report Generation</h1>
+       <br></br>
+            <div className='memoryAdder'>
+              <div className='btnSection4'>
+                <button className='btn btn-primary' onClick={handleClickGoBack}>
+                  <img src={backBtn} alt='back' title='Go back to Admin Tab' style={{ paddingRight: '1px' }} />
+                </button>
+                <button className='btn btn-primary' onClick={sortImagesDescending}>
+                  <img src={upBtn} alt='up' title='Descending Order' style={{ paddingRight: '1px' }} />
+                </button>
+                <button className='btn btn-primary' onClick={sortImagesAscending}>
+                  <img src={downBtn} alt='down' title='Ascending Order' style={{ paddingRight: '5px' }} />
+                </button>
+              </div>
+              <div className='search-bar'>
+                <input type='text' placeholder='Search Memory...' value={searchLocation} onChange={handleSearchInputChange} onKeyDown={handleKeyDown} className='form-control' />
+              </div>
+              <div className='btnSection4'>
+                <button className='btn btn-primary' onClick={handleSearch}>
+                  <img src={searchIcon} alt='search button' title='Search' style={{ paddingRight: '10px' }} />
+                </button>
+                <button className='btn btn-primary' onClick={downloadReport}>
+                  <img src={downloadBtn} alt='search button' title='Download Report' />
+                </button>
+              </div>
             </div>
-            <div class='hl_cards'>
-                <div className='memoryCardR'>
-                    <div className="cardR" id='cardR'>
-                        <div className="card-bodyR" id='card-bodyR'>
-                            <h2>Average View Count</h2>
-                            <h2>Per Memory</h2>
-                            <p style={{ textAlign: 'center', fontSize: '50px' }}>{calculateAverageViewCountPerImage()}</p>
-                        </div>
-                    </div>
-                </div>
-                {highestViewCountImage && (
-                    <div className='memoryCardR'>
-                        <div className="cardR" id='cardR'>
-                            <div className="card-bodyR" id='card-bodyR'>
-                                <h2>Highest View Count</h2>
-                                <p><b>Memory ID: </b>{highestViewCountImage._id}</p>
-                                <p><b>View Count: </b>{highestViewCountImage.viewCount}</p>
-                                <p><b>Photos: </b>{highestViewCountImage.image.length}</p>
-                                <p><b>Date: </b>{highestViewCountImage.date}</p>
-                                <p><b>Location: </b>{highestViewCountImage.location}</p>
-                            </div>
-                        </div>
-                    </div>
-                )}
-                {lowestViewCountImage && (
-                    <div className='memoryCardR'>
-                        <div className="cardR" id='cardR'>
-                            <div className="card-bodyR" id='card-bodyR'>
-                                <h2>Lowest View Count</h2>
-                                <p><b>Memory ID: </b>{lowestViewCountImage._id}</p>
-                                <p><b>View Count: </b>{lowestViewCountImage.viewCount}</p>
-                                <p><b>Photos: </b>{lowestViewCountImage.image.length}</p>
-                                <p><b>Date: </b>{lowestViewCountImage.date}</p>
-                                <p><b>Location: </b>{lowestViewCountImage.location}</p>
-                            </div>
-                        </div>
-                    </div>
-                )}
+          </div>
+
+          
+
+          <div className="w-100 my-4" style={{ display: 'flex', justifyContent: 'space-around' }}>
+    <div className='text-light'>
+        <div className="card text-light" style={{ width: '18rem', backgroundColor:'#26619c' }}>
+            <div className="card-body text-light">
+                <h4 className="card-title text-light">Average View Count</h4>
+                <h4 className='text-light'>Per Memory</h4>
+                <p  className="card-text text-center text-light" style={{ fontSize: '50px' }}>{calculateAverageViewCountPerImage()}</p>
             </div>
-        </div>
-        <div className='imageGrid' style={{ display: 'flex', justifyContent: 'center' }}>
-            {displayImages == null ? '' : displayImages.map((data, index) => (
-                <div key={index} className='memoryCard' style={{ display: 'flex', justifyContent: 'center' }}>
-                    <div className="card" id='card'>
-                        <div className="card-body" id='card-body'>
-                            <p><b>Memory ID: </b>{data._id}</p>
-                            <p><b>View Count: </b>{data.viewCount}</p>
-                            <p><b>Photos: </b>{data.image.length}</p>
-                            <p><b>Date: </b>{data.date}</p>
-                            <p><b>Location: </b>{data.location}</p>
-                        </div>
-                    </div>
-                </div>
-            ))}
         </div>
     </div>
+    {highestViewCountImage && (
+        <div className='text-light'>
+            <div className="card text-light" style={{ width: '18rem', backgroundColor:'#26619c' }}>
+                <div className="card-body text-light">
+                    <h4 className="card-title text-light">Highest View Count</h4>
+                    <p className='text-light'><b>Memory ID: </b>{highestViewCountImage._id}</p>
+                    <p className='text-light'><b>View Count: </b>{highestViewCountImage.viewCount}</p>
+                    <p className='text-light'><b>Photos: </b>{highestViewCountImage.image.length}</p>
+                    <p className='text-light'><b>Date: </b>{highestViewCountImage.date}</p>
+                    <p className='text-light'><b>Location: </b>{highestViewCountImage.location}</p>
+                </div>
+            </div>
+        </div>
+    )}
+    {lowestViewCountImage && (
+        <div className='text-light '>
+            <div className="card text-light " style={{ width: '18rem', backgroundColor:'#26619c' }}>
+                <div className="card-body text-light">
+                    <h4 className='text-light'>Lowest View Count</h4>
+                    <p className='text-light'><b>Memory ID: </b>{lowestViewCountImage._id}</p>
+                    <p className='text-light'><b>View Count: </b>{lowestViewCountImage.viewCount}</p>
+                    <p className='text-light'><b>Photos: </b>{lowestViewCountImage.image.length}</p>
+                    <p className='text-light'><b>Date: </b>{lowestViewCountImage.date}</p>
+                    <p className='text-light'><b>Location: </b>{lowestViewCountImage.location}</p>
+                </div>
+            </div>
+        </div>
+    )}
 </div>
+
+        </div>
+        <div className='imageGrid' style={{ display: 'flex', justifyContent: 'center' }}>
+          {displayImages == null ? '' : displayImages.map((data, index) => (
+            <div key={index} className='memoryCard' style={{ display: 'flex', justifyContent: 'center' }}>
+              <div className="card" id='card'>
+                <div className="card-body" id='card-body'>
+                  <p><b>Memory ID: </b>{data._id}</p>
+                  <p><b>View Count: </b>{data.viewCount}</p>
+                  <p><b>Photos: </b>{data.image.length}</p>
+                  <p><b>Date: </b>{data.date}</p>
+                  <p><b>Location: </b>{data.location}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
 
   )
 }

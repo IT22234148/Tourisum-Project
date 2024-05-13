@@ -52,6 +52,7 @@ const ViewGuides = () => {
       try {
         const response = await axios.get("http://localhost:5000/guides");
         setItems(response.data.items);
+        console.log(response.data.items)
         // Extract types from items
         const allTypes = response.data.items.map((item) => item.language);
         // Remove duplicate types

@@ -5,6 +5,7 @@ import "./User.css"; // Importing the CSS file
 
 function User(props) {
   const { _id, Firstname, Lastname, age, country, Email } = props.user || {};
+  const { isPrinting } = props; // Destructure the isPrinting prop
 
 
   const deleteHandler = async () => {
@@ -21,10 +22,17 @@ function User(props) {
       <td className="admin_tbl_td">{age}</td>
       <td className="admin_tbl_td">{country}</td>
       <td className="admin_tbl_td">{Email}</td>
-      <td className="admin_tbl_td">
-        <Link className="btn_dash_admin" to={`/userdetails/${_id}`}>Update</Link>
-        <button className="btn_dash_admin_dlt" onClick={deleteHandler}>Delete</button>
-      </td>
+       {/* Conditionally render the Actions buttons based on isPrinting */}
+       {!isPrinting && (
+        <td className="admin_tbl_td">
+          <Link className="btn_dash_admin" to={`/userdetails/${_id}`}>
+            Update
+          </Link>
+          <button className="btn_dash_admin_dlt" onClick={deleteHandler}>
+            Delete
+          </button>
+        </td>
+      )}
     </tr>
   );
 }

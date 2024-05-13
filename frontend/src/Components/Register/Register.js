@@ -96,12 +96,13 @@ function Register() {
               <label className="auth_lable">Firstname</label>
               <br />
               <input
-                className="auth_input"
+                className="auth_input w-100 rounded-4"
                 type="text"
                 value={user.Firstname}
                 onChange={handleInputChange}
                 name="Firstname"
                 placeholder="Enter Firstname"
+                style={{height:'40px'}}
                 required
               ></input>
               {errors.Firstname && (
@@ -112,12 +113,13 @@ function Register() {
               <label className="auth_lable">Lastname</label>
               <br />
               <input
-                className="auth_input"
+                className="auth_input w-100 rounded-4"
                 type="text"
                 value={user.Lastname}
                 onChange={handleInputChange}
                 name="Lastname"
                 placeholder="Enter Lastname"
+                style={{height:'40px'}}
                 required
               ></input>
               {errors.Lastname && (
@@ -128,12 +130,13 @@ function Register() {
               <label className="auth_lable">Age</label>
               <br />
               <input
-                className="auth_input"
+                className="auth_input w-100 rounded-4"
                 type="number"
                 value={user.Age}
                 onChange={handleInputChange}
                 name="Age"
                 placeholder="Enter Age"
+                style={{height:'40px'}}
                 required
               ></input>
               {errors.Age && (
@@ -144,12 +147,13 @@ function Register() {
               <label className="auth_lable">Country</label>
               <br />
               <input
-                className="auth_input"
+                className="auth_input w-100 rounded-4"
                 type="text"
                 value={user.Country}
                 onChange={handleInputChange}
                 name="Country"
                 placeholder="Enter Country"
+                style={{height:'40px'}}
                 required
               ></input>
               {errors.Country && (
@@ -160,12 +164,13 @@ function Register() {
               <label className="auth_lable">Email</label>
               <br />
               <input
-                className="auth_input"
+                className="auth_input w-100 rounded-4"
                 type="email"
                 value={user.Email}
                 onChange={handleInputChange}
                 name="Email"
                 placeholder="Enter Email"
+                style={{height:'40px'}}
                 required
               ></input>
               {errors.Email && (
@@ -176,12 +181,13 @@ function Register() {
               <label className="auth_lable">Password</label>
               <br />
               <input
-                className="auth_input"
+                className="auth_input w-100 rounded-4"
                 type="password"
                 value={user.Password}
                 onChange={handleInputChange}
                 name="Password"
                 placeholder="Enter Password"
+                style={{height:'40px'}}
                 required
               ></input>
               {errors.Password && (

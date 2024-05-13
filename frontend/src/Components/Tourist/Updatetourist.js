@@ -46,7 +46,7 @@ export default function Updatetourist(){
         
         await axios.put(`http://localhost:5000/tourist/update/${id}`, tourist);
         alert("Tourist details updated succesfully");
-        navigate("/dis");
+        navigate("/insurance-admin");
        
       };
 

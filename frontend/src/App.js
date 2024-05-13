@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router";
 import "./App.css";
-
+import { ToastContainer } from 'react-toastify';
 import Register from "./Components/Register/Register";
 import Login from "./Components/Login/Login";
 import Profile from "./Components/Profile/Profile";
@@ -26,14 +26,13 @@ import PackagesComponent from "./Components/Admin/ReviewManagement";
 import Users from "./Components/UserDetails/Users";
 import UpdateUsers from "./Components/UpdateUser/UpdateUser";
 
-import AddItem from "./Components/Renatal System/Admin/Add Item/AddItem";
-import AdminItems from "./Components/Renatal System/Admin/Item/Items";
-import UpdateItem from "./Components/Renatal System/Admin/Item/UpdateItem";
+import AddItem from "./Components/Renatal System/Admin/Add Transport/AddItem";
+import AdminItems from "./Components/Renatal System/Admin/Transport/Transport";
+import UpdateItem from "./Components/Renatal System/Admin/Transport/UpdateTransport";
 
-import UserItems from "./Components/Renatal System/User/Item/Items";
-import AddTransport from "./Components/Guide/Admin/Add Item/AddTransport";
-import AdminGuide from "./Components/Guide/Admin/Item/AdminGuide";
-import UpdateGuide from "./Components/Guide/Admin/Item/UpdateGuide";
+import UserItems from "./Components/Renatal System/User/ViewGuides/Items";
+import AdminGuide from "./Components/Guide/Admin/Guide/AdminGuide";
+import UpdateGuide from "./Components/Guide/Admin/Guide/UpdateGuide";
 
 
 import AdminLpage from "./Components/AdminLPage/AdminLpage";
@@ -67,17 +66,21 @@ import PricingCard from './Components/Tourist/PricingCard';
 import Calculation from './Components/Tourist/Calculation';
 import InsuranceManager from './Components/Tourist/InsuranceManager';
 import Admin from "./pages/Admin";
-import Items from "./Components/Renatal System/User/Item/Items";
+import Items from "./Components/Renatal System/User/ViewGuides/Items";
+import ViewGuides from "./Components/Service/User/Guide/Guide";
 import CustomerView from "./pages/AdminTab/CustomerView";
 import AUser from "./Components/Admin/AUser";
 import ReviewManagement from "./Components/Admin/ReviewManagement";
-import ViewGuides from "./Components/Guide/User/Item/ViewGuides";
+
 import UserDashboard from "./pages/UserDashboard";
 import AddReview from "./Components/Reviews/AddUser/AddReview";
 import SeeReviews from "./Components/Reviews/UserDetails/SeeReviews";
 import UpdateReview from "./Components/Reviews/UpdateUser/UpdateReview";
 import BookingsAdmin from "./Components/Booking/BookingsAdmin";
 import AddUser from "./Components/AddUser/AddUser";
+import AddGuide from "./Components/Service/Add Guide/AddGuide";
+import Guides from "./Components/Service/Guide/Guides";
+import LoginAdmin from "./Components/Login/LoginAdmin";
 
 
 
@@ -87,6 +90,7 @@ import AddUser from "./Components/AddUser/AddUser";
 function App() {
   return (
     <div>
+       <ToastContainer />
       <React.Fragment>
         <Routes>
           <Route path="/" element={<BeforHome />} />
@@ -122,13 +126,14 @@ function App() {
           {/* User-Item Display  */}
           <Route exact path="/items" element={<UserItems />} />
 
-          <Route exact path="/add-guides" element={<AddTransport />} />
+          {/* <Route exact path="/add-guides" element={<AddGuide />} /> */}
           <Route exact path="/admin-guides" element={<AdminGuide />} />
           <Route path="/update-guide/:id" element={<UpdateGuide />} />
           
 
           {/* User-Item Display  */}
-          <Route exact path="/guides" element={<UserItems />} />
+          <Route exact path="/guides" element={<ViewGuides />} />
+          user-info
 
 
           <Route path="/ContSALive" element={<ContSALive />} />
@@ -170,6 +175,8 @@ function App() {
           <Route path='/dis' element={<Displaytourist/>}/>
           <Route path='/update/:id' element={<Updatetourist/>}/>
           <Route path='/cal' element={<Calculation />} />
+          <Route path='/insurance-admin' element={<InsuranceManager />} />
+          
           
           <Route path='/gallery' element={<CustomerView />} />
           
@@ -183,6 +190,17 @@ function App() {
           <Route path="/adminseereviews" element={<PackagesComponent />} />
           <Route path="/adminseereviews/:id" element={<UpdateUsers />} />
           <Route path="/seereviews" element={<SeeReviews />} />
+
+
+          <Route exact path="/add-guide" element={<AddGuide />} />
+          <Route exact path="/admin-guide" element={<Guides />} />
+          <Route path="/update-guide/:id" element={<UpdateGuide />} />
+
+          <Route path="/admin-login" element={< LoginAdmin/>} />
+          
+
+          {/* User-Item Display  */}
+          <Route exact path="/" element={<UserItems />} />
 
 
           

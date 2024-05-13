@@ -39,23 +39,21 @@ function NavBar() {
                 <h4 className="dropdown_item" onClick={() => handleNavItemClick("/insurance")}>
                   -Insurance
                 </h4>
-                <h4 className="dropdown_item" onClick={() => handleNavItemClick("/guide")}>
-                  -Service
+                <h4 className="dropdown_item" onClick={() => handleNavItemClick("/guides")}>
+                  -Find A Guide
                 </h4>
               </div>
             )}
           </div>
           <h4 className="navitem_text">ABOUT</h4>
        
-          <h4 className="navitem_text" onClick={() => handleNavItemClick("/reviews")}>
+          <h4 className="navitem_text" onClick={() => handleNavItemClick("/Addreviews")}>
             REVIEWS
           </h4>
-          <h4 className="navitem_text" onClick={() => handleNavItemClick("/contact")}>
+          <h4 className="navitem_text" onClick={() => handleNavItemClick("/UserLpage")}>
             CONTACT
           </h4>
-          <h4 className="navitem_text" onClick={() => handleNavItemClick("/admin")}>
-            ADMIN
-          </h4>
+          
           <h4 className="navitem_text" onClick={() => handleNavItemClick("/profile")}>
             PROFILE
           </h4>

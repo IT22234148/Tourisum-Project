@@ -49,13 +49,14 @@ export default function InsuranceManager() {
     
 
     return (
-        <div className="container">
+        <div className="m-4 p-4">
             <h1 className="topic">Tourist Insurance Details</h1>
             
             <div className="search-container">
             <input onChange={(e) => setSearchQuery(e.target.value)}
                 type="text"
                 name="search"
+                style={{width:'400px'}}
                 placeholder="Search tourists Details"></input>
             <button onClick={handleSearch}>Search</button> 
             </div>

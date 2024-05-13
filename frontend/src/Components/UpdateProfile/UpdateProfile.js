@@ -103,16 +103,18 @@ function UpdateProfile() {
       <h1 className="topic_auth">
         Update User <span className="sub_auth">Account</span>
       </h1>
+      <br/>
       <div className="form_main_box">
         <form className="form_user_details" onSubmit={handleSubmit}>
           <label className="auth_lable">Firstname</label>
           <br />
           <input
-            className="auth_input"
+            className="auth_input w-100 rounded-4"
             type="text"
             value={input.Firstname}
             onChange={handleChange}
             name="Firstname"
+            style={{height:'40px'}}
             required
           />
           <br />
@@ -120,11 +122,12 @@ function UpdateProfile() {
           <label className="auth_lable">Lastname</label>
           <br />
           <input
-            className="auth_input"
+            className="auth_input w-100 rounded-4"
             type="text"
             value={input.Lastname}
             onChange={handleChange}
             name="Lastname"
+            style={{height:'40px'}}
             required
           />
           <br />
@@ -132,23 +135,25 @@ function UpdateProfile() {
           <label className="auth_lable">Age</label>
           <br />
           <input
-            className="auth_input"
+            className="auth_input w-100 rounded-4"
             type="number"
             value={input.Age}
             onChange={handleChange}
             name="Age"
+            style={{height:'40px'}}
             required
           />
           <br />
           <br />
-          <label classname="auth_lable">Country</label>
+          <label classname="auth_input w-100 rounded-4">Country</label>
           <br />
           <input
-            className="auth_input"
+            className="auth_input w-100 rounded-4"
             type="text"
             value={input.Country}
             onChange={handleChange}
             name="Country"
+            style={{height:'40px'}}
             required
           />
           <br />
@@ -156,11 +161,12 @@ function UpdateProfile() {
           <label className="auth_lable">Email</label>
           <br />
           <input
-            className="auth_input"
+            className="auth_input w-100 rounded-4"
             type="email"
             value={input.Email}
             onChange={handleChange}
             name="Email"
+            style={{height:'40px'}}
             required
           />
           <br />
